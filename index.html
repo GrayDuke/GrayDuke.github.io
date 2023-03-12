@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+</head>
+
+<body>
+    <header class="header1">
+
+        <div class="" style="background-color: #151515;">
+            <div class="container">
+                <div class="logo">
+                    <a href="">Flowers21</a>
+                    <p>Цветки | Декор | Травы</p>
+                </div>
+
+                <div class="nav_header ">
+                    <a href="">О нас</a>
+                    <a href="">Каталог</a>
+                    <a href="">Контакты</a>
+                    <a href="">Войти/Регистрция</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <div class="logo">
+                <a href="{% url 'index' %}">Flowers21</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Контакты</a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{% url 'profile' %}">Профиль</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{% url 'logout' %}">Выйти</a></li>
+
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{% url 'login' %}">Вход</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{% url 'register' %}">Регистация</a></li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content1">
+            <img src="img/bg-3.jpg" alt="" srcset="">
+            <div class="description1">
+                <h1>Создаем <span>любовь</span> через цветы</h1>
+                <p>Мы находим, создаем и доставляем вам ваши свежие великолепные цветы. С нами можно научиться
+                    мастерству флориста и выпить чай на чайной церемонии</p>
+                <div class="but1">
+                    <a href="">ПЕРЕЙТИ В КАТАЛОГ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content2">
+            <div class="container">
+                <h3>Наши Товары</h3>
+                <div class="products">
+                    <ul id="flexiselDemo3">
+                        <li>
+                            <img src="img/fl1.jpg" />
+                            <h5>Букет Дня</h5>
+                            <p>3550 руб.</p>
+                        </li>
+                        <li>
+                            <img src="img/fl2.jpg" />
+                            <h5>Букет Дня</h5>
+                            <p>3550 руб.</p>
+                        </li>
+                        <li>
+                            <img src="img/fl3.jpg" />
+                            <h5>Букет Дня</h5>
+                            <p>3550 руб.</p>
+                        </li>
+                        <li>
+                            <img src="img/fl4.jpg" />
+                            <h5>Букет Дня</h5>
+                            <p>3550 руб.</p>
+                        </li>
+                    </ul>
+
+                    <div class="clearout"></div>
+                    <script type="text/javascript">
+                        $(window).load(function () {
+                            $("#flexiselDemo3").flexisel({
+
+                                visibleItems: 4,
+                                itemsToScroll: 1,
+                                autoPlay: {
+                                    enable: true,
+                                    interval: 5000,
+                                    pauseOnHover: true
+                                }
+                            });
+
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content3">
+            <img src="img/desc2.jpg" alt="" srcset="">
+            <div class="description1">
+                <h1>Мероприятия</h1>
+                <p>В нашем пространстве регулярно проходят мастре классы по созданию композиций из свежих и сухих
+                    цветов, а так же чаепития траванях чаев и лекций о красоте</p>
+            </div>
+        </div>
+
+        <div class="content4">
+            <div class="container">
+                <h3>У нас Есть доставка!</h3>
+                <!-- style="display: flex; justify-content: space-between;" -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <p>Доставка курьером<br>по Чебоксарам: <b>250 руб.</b></p>
+
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <p>Срочная доставка По Чебоксарам<br><b>+250 руб. к доставке</b></p>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <p>В другие города Почтой<br>России: <b>500 руб.</b></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <div class="row">
+
+                <div class="column col-lg-3 col-md-6 col-xs-12">
+                    <h3 class=" ">Информация</h3>
+                    <a href="">Главное</a>
+                    <a href="">Новости</a>
+                    <a href="">Контакты</a>
+                    <a href="">О нас</a>
+                </div>
+                <!-- Second col -->
+                <div class=" column col-lg-3 col-md-6 col-xs-12">
+                    <h3 class=" ">Заказ</h3>
+                    <a href="">Доставка</a>
+                    <a href="">Оплата</a>
+                    <a href="">Система скидок</a>
+                </div>
+
+
+
+                <!-- Third col -->
+                <div class="column col-lg-3 col-md-6 col-xs-12">
+                    <h3 class=" ">Другое</h3>
+                    <a href="">Вход</a>
+                    <a href="">Регистация</a>
+                    <a href="">Частозадаваемые вопросы</a>
+                </div>
+                <!-- Fourth col -->
+                <div class="column col-lg-3 col-md-6 col-xs-12">
+                    <h3 class=" ">Контакты</h3>
+                    <a href="">+7 (800) 555-35-35</a>
+                    <a href="">г. Чебоксары, ул.Декабристов 17</a>
+                    <a href="">Пн - Пт. с 8:30 до 21.00</a>
+                    <a href="">Сб - Вс. с 10:00 до 20.00</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container bottomFooter">
+            <div class="logos">
+                <i class="fa-brands fa-instagram  "></i>
+                <i class="fa-brands fa-facebook "></i>
+                <i class="fa-brands fa-twitter "></i>
+            </div>
+
+            <p style="color: #EEEDE8;">Ⓒ 2022 Интернет-магазин Flowers21</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/cb6fd5b1d6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
